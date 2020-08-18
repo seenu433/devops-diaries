@@ -1,0 +1,6 @@
+*.suo
+*.vscode
+*.user
+*.sdf
+bin/
+obj/
