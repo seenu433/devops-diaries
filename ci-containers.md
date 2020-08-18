@@ -1,6 +1,6 @@
-# Continuos Integration for Container Deployment
+# Continuos Deployment for Containers
 
-When interacting with customers on continuos integration for container deployment, I recommend discussing the below concepts:
+When interacting with customers on continuos deployment for containers, I recommend discussing the below concepts:
 
 1. Branching Strategy: [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) is a widely used strategy which i prefer to derive the image tags from the branch names.
 2. Include the release number in the branch name.
@@ -67,8 +67,11 @@ Now that we have an image ready, we will attempt to enable continuos deployment 
     cd _static-web-app
     ls
 
+    # Deployment 
+
     # Prepare to deploy
     # Create kubeconfig file to run kubectl command. It is stored in a pipeline variable CONFIG
+
     echo $CONFIG | base64 --decode >> config
 
     kubectl create configmap css-file --from-file=site.css -n devops-demo --dry-run=client -o yaml | kubectl apply --kubeconfig=config -f -
