@@ -1,6 +1,6 @@
-# Continuos Deployment for Containers
+# Continuous Deployment for Containers
 
-When interacting with customers on continuos deployment for containers, I recommend discussing the below concepts:
+When interacting with customers on continuous deployment for containers, I recommend discussing the below concepts:
 
 1. Branching Strategy: [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) is a widely used strategy which i prefer to derive the image tags from the branch names.
 2. Include the release number in the branch name.
@@ -25,12 +25,12 @@ docker build -t myregistry.azurecr.io/staicweb:latest .
 docker push myregistry.azurecr.io/staicweb:latest
 ```
 
-Now that we have an image ready, we will attempt to enable continuos deployment on change of configuration or on change of the vendor provided image
+Now that we have an image ready, we will attempt to enable continuous deployment on change of configuration or on change of the vendor provided image
 
 1. Create a new git repository with the deployment manifest and the configuration files (site.css in this case). [sample] (https://github.com/seenu433/mvc-static-web-ci)
 2. Follow the Gitflow branching strategy by naming the release branch as release-version. For ex. release-4.1
 3. Create a release pipeline with the artifacts as the ci git repo
-4. Enable *Continuos Deployment Trigger* with Branch Filter to include all release branches **release/***
+4. Enable *Continuous Deployment Trigger* with Branch Filter to include all release branches **release/***
 5. Add a *Bash Script* task to the deployment stage. Use the sample script explained below
 
 ### Sample Script
