@@ -1,4 +1,4 @@
-# DevOps with Containers on Azure Government Cloud
+# Using Azure DevOps to deploy an application on AKS Private Cluster in Azure US Government
 
 This article details building and deploying a container to Azure Government cloud using Azure DevOps.
 
