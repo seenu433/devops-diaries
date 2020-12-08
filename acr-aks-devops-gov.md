@@ -219,7 +219,7 @@ sudo az aks install-cli
 
 ### Create Service Connections
 
-From Azure DevOps, create an Docker Registry Service Connection
+From Azure DevOps, create a Docker Registry Service Connection
 - Navigate to *Project Settings*
 - Click *New Service Connection*
 - Select *Docker Registry*
